@@ -36,7 +36,7 @@ const About = () => {
                     <Markdown children={content.md}/>
                 </div>
                 <div className="about-photo">
-                    <img className="propic" alt="Alberto profile" src={proPic}/>
+                    <img className="propic" alt="Naveen profile" src={proPic}/>
                 </div>
             </div>
         </section>
