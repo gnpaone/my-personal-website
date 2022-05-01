@@ -129,7 +129,7 @@ const ContactLinks = props => {
                     key={item.name}
                     className="contacts-item"   
                 >
-                    <a className={"contacts-link" + ((position) ? " fade-in-left-"+i-- : "")} title={"Link to Alberto's " + item.name} href={item.link} target="social">{item.icon}</a>
+                    <a className={"contacts-link" + ((position) ? " fade-in-left-"+i-- : "")} title={"Link to Naveen's " + item.name} href={item.link} target="social">{item.icon}</a>
                 </li>
 
         );
