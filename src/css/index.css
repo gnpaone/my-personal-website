@@ -1,0 +1,305 @@
+body, html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Spartan', 'Roboto',  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    background-color: #0a192f;
+    color: #d0efff;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* hoverable title letters */
+span.space {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h3 {
+    font-weight: lighter;
+    color: #61d3a3;
+    font-family: 'Space Mono', 'Consolas', 'Menlo', 'Droid Sans Mono', monospace;
+    border-bottom: 1px solid #61d3a3;
+}
+
+span.letter {
+    margin-left: 2px;
+    color: inherit;
+    display: inline-block;
+    -webkit-transition:all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition:all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition:all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+/* title letters hover animations */
+/* removed for now to reduce clutter inside the hero section, there are already a lot of effects! */
+
+span.letter:hover {
+    color: #2196f3;
+    text-shadow: 0 0 20px #2196f3;
+    -webkit-transform:rotate(15deg) scale(1.3);
+    -moz-transform:rotate(15deg) scale(1.3);
+    -ms-transform:rotate(15deg) scale(1.3);
+    -o-transform:rotate(15deg) scale(1.3);
+    transform:rotate(15deg) scale(1.3);
+}
+
+span.letter:nth-child(2), span.letter:last-child {
+    color: #61d3a3; 
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+@media screen and (min-width: 841px) {
+    div.container {
+        margin-left : 15%;
+        margin-right: 15%;
+    }
+}
+
+/*links*/
+a.mail-link {
+    text-decoration: none;
+    color: #d0efff;
+    opacity: inherit;
+    transition: .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: inset 0 -2px 0 #61d3a3;
+}
+
+a.mail-link:hover {
+    color: black;
+    box-shadow: inset 0 -25px 0 #61d3a3;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*animations*/
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+    
+@keyframes fadeInDown {
+    from { opacity: 0; display: hidden; transform: translate3d(0, -20px, 0); }
+    to { opacity: 1; transform: none; display: flex;}
+}
+
+.fade-in-down {
+    animation: fadeInDown .5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes fadeOutUp {
+    from { opacity: 1; transform: none; }
+    to { opacity: 0; transform: translate3d(0, 20px, 0); }
+}
+
+.fade-out-up {
+    animation: fadeOutUp .5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes fadeOutUpBig {
+    from { opacity:1; transform: none;}
+    to {opacity: 0; transform: translate3d(0, -100px, 0);}
+}
+
+.fade-out-up-big {
+    animation: fadeOutUpBig .5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+  
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 20px, 0); }
+    to { opacity: 1; transform: none; }
+}
+
+.fade-in-up {
+    animation: fadeInUp .5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+  
+@keyframes fadeInUpBig {
+    from { opacity: 0; transform: translate3d(0, 100px, 0); }
+    to { opacity: 1; transform: none; }
+}
+  
+  
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translate3d(-30px, 0, 0); }
+    to { opacity: 1; transform: none; }
+}
+
+.fade-in-left {
+    animation: fadeInLeft .5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+
+}
+
+.fade-in-left-7 {
+    animation: fadeInLeft .5s cubic-bezier(0.645, 0.045, 0.355, 1) .7s forwards;
+
+}
+
+.fade-in-left-8 {
+    animation: fadeInLeft .5s cubic-bezier(0.645, 0.045, 0.355, 1) .8s forwards;
+
+}
+
+.fade-in-left-9 {
+    animation: fadeInLeft .5s cubic-bezier(0.645, 0.045, 0.355, 1) .9s forwards;
+
+}
+
+.fade-in-left-10 {
+    animation: fadeInLeft .5s cubic-bezier(0.645, 0.045, 0.355, 1) 1s forwards;
+
+}
+
+.fade-in-left-11 {
+    animation: fadeInLeft .5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.1s forwards;
+
+}
+
+.to-slide {
+    opacity: 0;
+}
+
+.fade-out-left {
+    animation: fadeInLeft .5s cubic-bezier(0.645, 0.045, 0.355, 1) reverse;
+}
+  
+@keyframes fadeInLeftBig {
+    from { opacity: 0; transform: translate3d(-100px, 0, 0); }
+    to { opacity: 1; transform: none; }
+}
+  
+  
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translate3d(20px, 0, 0); }
+    to { opacity: 1; transform: none; }
+}
+
+.fade-in-right {
+    animation: fadeInRight .5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+
+}
+
+@keyframes fadeOutLeft {
+    from { opacity: 1; transform: none; }
+    to { opacity: 0; transform: translate3d(-30px, 0, 0); }
+}
+
+.fade-out-left {
+    animation: fadeOutLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards !important;
+}
+
+/*next page buttons*/    
+/*
+div.container {
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //box-shadow: 10px 0 10px 20px rgba(0,0,0,.3);
+    transition: all .2s ease-in;
+}
+
+div.container.slide-out {
+    left: -100vw;
+}
+
+a.next-page {
+    position: absolute;
+    bottom: 50%;
+    right: 20px;
+}
+
+a.next-page span {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 6px;
+    background-color: #7a7a7a;
+    transition: .1s ease-in;
+}
+
+a.next-page span:first-child {
+    transform: rotate(45deg);
+}
+
+a.next-page:hover span:first-child {
+    width: 40px;
+    margin-bottom: 11px;
+}
+
+a.next-page span:nth-child(2) {
+    right: 21px;
+    width: 0;
+}
+
+a.next-page:hover span:nth-child(2) {
+    width: 24px;
+}
+
+a.next-page span:last-child {
+    transform: rotate(-45deg);
+}
+
+a.next-page:hover span:last-child {
+    margin-top: 11px;
+    width: 40px;
+}*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+::-webkit-scrollbar-track-piece:start {
+    background: #61d3a3;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    background: #61d3a3;
+    border-radius: 10px;
+    transition: all .35s ease-in-out;
+    height:10px;
+}

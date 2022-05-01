@@ -1,0 +1,113 @@
+div.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 370px;
+    padding-right: 1px;
+    z-index: 10;
+    width: 122px;
+    opacity: 0;
+    color: #61d3a3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transform: translateY(-20px);
+    z-index: -1;
+    transition: transform 700ms cubic-bezier(0.77, 0, 0.175, 1), background-color 700ms ease, opacity 500ms ease, z-index 1000ms ease;
+}
+
+
+ul.navbar-list {
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    box-shadow: inset 2px 0 0 #505050;
+}
+
+ul.navbar-list a {
+    display: none;  /*<- else the links would still be clickable even with hidden overlay*/
+}
+
+div.overlay.expanded ul.navbar-list a {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: none;
+    color: #61d3a3;
+    padding: 20px;
+    text-align: center; /*<- it's default is left if you remove this line*/
+    font-family: 'Consolas', 'Menlo','Droid Sans Mono', monospace;
+    width: 100%;
+}
+
+div.overlay.expanded ul.navbar-list a:hover {
+    color:#d0efff;
+    transform: translateY(-5px);
+}
+
+div.overlay.expanded ul.navbar-list a.active {
+    color:#d0efff;
+    box-shadow: inset 2px 0 0 #d0efff;
+    background-color: rgb(23, 33, 48);
+}
+
+div.burger-button {
+    padding: 15px;
+    z-index: 1000;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-height: 30px;
+    opacity: 0;
+    animation: fadeInDown .3s cubic-bezier(0.645, 0.045, 0.355, 1) .5s forwards;
+}
+
+div.overlay.expanded {
+    z-index: 10;
+    transform: translateY(215px);
+    opacity: 1;
+    background-color: #0a192f; /*#12082e-old*/
+    transition: transform 700ms cubic-bezier(0.77, 0, 0.175, 1), background-color 700ms ease, opacity 500ms ease, z-index 1000ms ease;
+}
+
+.burger-button span {
+    display: block;
+    width: 42px;
+    height: 2px;
+    margin: 8px;
+    background-color: #61d3a3;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+div.burger-button:hover {
+    cursor: pointer;
+}
+
+/*burger animations*/
+@media all and (min-width:1025px) {
+
+    div.burger-button:hover span:nth-child(1), div.burger-button:hover span:nth-child(3) {
+        margin-left: -2px;
+    }
+    
+    div.burger-button:hover span:nth-child(2) {
+        margin-right: -2px;
+    }
+}
+
+div.burger-button.expanded span:nth-child(2){
+    opacity: 0;
+}
+
+div.burger-button.expanded span:nth-child(1) {
+    transform: translateY(20px) rotate(45deg);
+}
+
+div.burger-button.expanded span:nth-child(3) {
+    transform: rotate(-45deg);
+}

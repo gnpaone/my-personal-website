@@ -1,0 +1,124 @@
+div.contacts-container {
+    min-height: 101vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+div.contacts-group {
+    display:flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size:35px;
+    margin-top: 30px;
+}
+
+div.contacts-sidebar {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    right: auto;
+    z-index: 10;
+    width: 13%;
+    color: #61d3a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) .6s forwards;
+    opacity: 0;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+ul.contacts-banner {
+    font-size: 40px;
+    margin: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+ul.contacts-sidebar-list {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+ul.contacts-sidebar-list::after{
+    opacity: 0;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    background-color: #61d3a3;
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) .8s forwards;
+
+}
+
+ul.contacts-sidebar-list::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 800px;
+    background-color: #61d3a3;
+    opacity: 0;
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) 1.4s forwards;
+}
+
+a.contacts-link {
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: none;
+    color: #61d3a3;
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+ul.contacts-sidebar-list a {
+    opacity: 0;
+    display: inline-block;
+    padding: 20px;
+    text-decoration-skip-ink: auto;
+    position: relative;
+}
+
+li.contacts-item a.contacts-link svg {
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+li.contacts-item a.contacts-link:hover svg {
+    color:#d0efff;
+    transform: translateY(-5px);
+}
+
+svg {
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.contacts-sidebar svg {
+    width: 21px;
+    height: 21px;
+}
+
+.contacts-banner svg {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 841px) {
+    div.contacts-sidebar {
+        display: none;
+    }
+
+    div.contacts-mobile {
+        display:block;
+    }
+}

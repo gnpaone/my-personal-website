@@ -1,0 +1,38 @@
+img.propic {
+    border-radius: 50%;
+    border: 5px solid #61d3a3;
+    height: 250px;
+}
+
+div.about-photo {
+    margin: 0;
+    padding : 0;
+    display:none;
+}
+
+@media all and (min-width: 841px) {
+    div.about-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+div.about-container {
+    min-height: 100vh;
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 841px) {
+    div.about-text {
+        width: auto;
+    }
+}
+
+span.heavier {
+    font-weight: bold;
+}

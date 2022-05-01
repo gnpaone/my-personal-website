@@ -1,0 +1,64 @@
+#chatwindow-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 12px;
+    padding-left: 12px;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.close:hover {
+    transform:scale(1.3,1.3);
+    -webkit-transform:scale(1.3,1.3);
+    -moz-transform:scale(1.3,1.3);
+}
+
+#info {
+  position:absolute;
+  top:25%;
+  left:25%;
+  -ms-transform: translateX(-25%) translateY(-25%);
+  -webkit-transform: translate(-25%,-25%);
+  transform: translate(-25%,-25%);
+}   
+
+.chatbubble {
+    max-width: 350px;
+    border-radius: 30px;
+    margin: 12px 14px;
+    width: inherit;
+    overflow-wrap: break-word;
+    padding: 7px 20px;
+    display: inline-block;
+    font-size: 15px;
+    word-spacing: 0.3px;
+    color: white;
+    text-align: start;
+}
+
+.bot {
+    border-top-left-radius: 0; 
+    background-color: #f1f0f0;
+    color: #222;
+}
+
+.me {
+
+    border-top-right-radius: 0;
+    background-color: #61dafb; /*#ee6e73*/
+}
+
+@keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}.hide{display:none !important}.left-align{text-align:left}.right-align{text-align:right}.center,.center-align{text-align:center}.left{float:left !important}.right{float:right !important}.no-select,input[type=range],input[type=range]+.thumb{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.circle{border-radius:50%}
+/*!
+ * Materialize v1.0.0 (http://materializecss.com)
+ * Copyright 2014-2017 Materialize
+ * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+ */
+ -webkit-input-placeholder{color:#d1d1d1}::-moz-placeholder{color:#d1d1d1}:-ms-input-placeholder{color:#d1d1d1}::-ms-input-placeholder{color:#d1d1d1}::placeholder{color:#d1d1d1}input:not([type]),input[type=text]:not(.browser-default),input[type=password]:not(.browser-default),input[type=email]:not(.browser-default),input[type=url]:not(.browser-default),input[type=time]:not(.browser-default),input[type=date]:not(.browser-default),input[type=datetime]:not(.browser-default),input[type=datetime-local]:not(.browser-default),input[type=tel]:not(.browser-default),input[type=number]:not(.browser-default),input[type=search]:not(.browser-default),textarea.materialize-textarea{background-color:transparent;border:none;border-bottom:1px solid #9e9e9e;border-radius:0;outline:none;height:3rem;width:100%;font-size:16px;margin:0 0 8px 0;padding:0;-webkit-box-shadow:none;box-shadow:none;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-transition:border .3s, -webkit-box-shadow .3s;transition:border .3s, -webkit-box-shadow .3s;transition:box-shadow .3s, border .3s;transition:box-shadow .3s, border .3s, -webkit-box-shadow .3s}input:not([type]):disabled,input:not([type])[readonly="readonly"],input[type=text]:not(.browser-default):disabled,input[type=text]:not(.browser-default)[readonly="readonly"],input[type=password]:not(.browser-default):disabled,input[type=password]:not(.browser-default)[readonly="readonly"],input[type=email]:not(.browser-default):disabled,input[type=email]:not(.browser-default)[readonly="readonly"],input[type=url]:not(.browser-default):disabled,input[type=url]:not(.browser-default)[readonly="readonly"],input[type=time]:not(.browser-default):disabled,input[type=time]:not(.browser-default)[readonly="readonly"],input[type=date]:not(.browser-default):disabled,input[type=date]:not(.browser-default)[readonly="readonly"],input[type=datetime]:not(.browser-default):disabled,input[type=datetime]:not(.browser-default)[readonly="readonly"],input[type=datetime-local]:not(.browser-default):disabled,input[type=datetime-local]:not(.browser-default)[readonly="readonly"],input[type=tel]:not(.browser-default):disabled,input[type=tel]:not(.browser-default)[readonly="readonly"],input[type=number]:not(.browser-default):disabled,input[type=number]:not(.browser-default)[readonly="readonly"],input[type=search]:not(.browser-default):disabled,input[type=search]:not(.browser-default)[readonly="readonly"],textarea.materialize-textarea:disabled,textarea.materialize-textarea[readonly="readonly"]{color:rgba(0,0,0,0.42);border-bottom:1px dotted rgba(0,0,0,0.42)}input:not([type]):disabled+label,input:not([type])[readonly="readonly"]+label,input[type=text]:not(.browser-default):disabled+label,input[type=text]:not(.browser-default)[readonly="readonly"]+label,input[type=password]:not(.browser-default):disabled+label,input[type=password]:not(.browser-default)[readonly="readonly"]+label,input[type=email]:not(.browser-default):disabled+label,input[type=email]:not(.browser-default)[readonly="readonly"]+label,input[type=url]:not(.browser-default):disabled+label,input[type=url]:not(.browser-default)[readonly="readonly"]+label,input[type=time]:not(.browser-default):disabled+label,input[type=time]:not(.browser-default)[readonly="readonly"]+label,input[type=date]:not(.browser-default):disabled+label,input[type=date]:not(.browser-default)[readonly="readonly"]+label,input[type=datetime]:not(.browser-default):disabled+label,input[type=datetime]:not(.browser-default)[readonly="readonly"]+label,input[type=datetime-local]:not(.browser-default):disabled+label,input[type=datetime-local]:not(.browser-default)[readonly="readonly"]+label,input[type=tel]:not(.browser-default):disabled+label,input[type=tel]:not(.browser-default)[readonly="readonly"]+label,input[type=number]:not(.browser-default):disabled+label,input[type=number]:not(.browser-default)[readonly="readonly"]+label,input[type=search]:not(.browser-default):disabled+label,input[type=search]:not(.browser-default)[readonly="readonly"]+label,textarea.materialize-textarea:disabled+label,textarea.materialize-textarea[readonly="readonly"]+label{color:rgba(0,0,0,0.42)}input:not([type]):focus:not([readonly]),input[type=text]:not(.browser-default):focus:not([readonly]),input[type=password]:not(.browser-default):focus:not([readonly]),input[type=email]:not(.browser-default):focus:not([readonly]),input[type=url]:not(.browser-default):focus:not([readonly]),input[type=time]:not(.browser-default):focus:not([readonly]),input[type=date]:not(.browser-default):focus:not([readonly]),input[type=datetime]:not(.browser-default):focus:not([readonly]),input[type=datetime-local]:not(.browser-default):focus:not([readonly]),input[type=tel]:not(.browser-default):focus:not([readonly]),input[type=number]:not(.browser-default):focus:not([readonly]),input[type=search]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]){border-bottom:1px solid #26a69a;-webkit-box-shadow:0 1px 0 0 #26a69a;
+ }

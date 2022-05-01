@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Spartan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a192f" />
+    <meta name="author" content="Naveen Prashanth"/>
+    <meta name="robots" content="index,follow"/>
+    <meta
+      name="description"
+      content="Naveen Prashanth, Computer Engineer and Web developer, personal website. Contact me for any project."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/gnp_logo_white_192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Naveen Prashanth</title> 
+  </head>
+  <body>
+    <noscript>Naveen Prashanth's personal website. In order to run this app correctly, you need to enable JavaScript.</noscript>
+    <script type="x-shader/x-vertex" id="wrapVertexShader">
+      attribute float size;
+      attribute vec3 color;
+      varying vec3 vColor;
+      void main() {
+        vColor = color;
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_PointSize = size * ( 350.0 / - mvPosition.z );
+        gl_Position = projectionMatrix * mvPosition;
+      }
+      </script>
+      <script type="x-shader/x-fragment" id="wrapFragmentShader">
+          varying vec3 vColor;
+          uniform sampler2D texture;
+          void main(){
+            vec4 textureColor = texture2D( texture, gl_PointCoord );
+            if ( textureColor.a < 0.3 ) discard;
+            vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+            gl_FragColor = color;
+          }
+      </script>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+div.stats-container {
+    padding-top: 5em;
+}
+
+#stats {
+  table {
+    width: 100%;
+  }
+}

@@ -1,0 +1,81 @@
+div.header-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    z-index : 10;
+}
+
+div.welcome {
+    z-index: 1;
+    position: absolute;
+}
+
+h1.welcome-hero {
+    font-weight: lighter;
+    font-family: 'Space Mono', 'Consolas', 'Menlo', 'Droid Sans Mono', monospace;
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    color: #61d3a3;
+}
+
+h2.welcome-name {
+    font-weight: lighter;
+    font-size: 32px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    opacity: 0;
+    color: white;
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+p.welcome-info {
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    color: #d0efff;
+}
+
+p.welcome-sectors {
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeInLeft .3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    color: #d0efff;
+}
+
+p.welcome-sectors span {
+    padding: 5px;
+}
+
+p.welcome-sectors span:not(:first-child) {
+    padding-left: 20px;
+}
+
+p.welcome-sectors span:not(:last-child) {
+    border-right: 2px solid #61d3a3;
+    padding-right: 20px;
+}
+
+
+
+@media all and (min-width: 841px) {
+    h2.welcome-name {
+        font-size: 45px;
+    }
+    
+    p.welcome-info {
+        font-size: 25px;
+    }
+}
+
+canvas {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    animation: fadeInRight .3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
